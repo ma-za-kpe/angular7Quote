@@ -1,0 +1,10 @@
+<app-add-quote (addQuote)="addNewQuote($event)"></app-add-quote>
+
+<ul>
+  <div *ngFor=' let quote of quotes'>
+    <li>
+      <h1>{{quote.title}}</h1> formed by <h2>{{quote.arthor}}</h2> and published by <h3>{{quote.publisher}}</h3>
+    </li>
+  </div>
+
+</ul>
