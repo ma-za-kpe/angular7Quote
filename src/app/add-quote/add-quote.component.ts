@@ -8,7 +8,7 @@ import { Quote } from "../quote";
   styleUrls: ["./add-quote.component.css"]
 })
 export class AddQuoteComponent implements OnInit {
-  newQuote = new Quote("", "", "");
+  newQuote = new Quote("", "", "", 0);
 
   @Output() addQuote = new EventEmitter<Quote>();
 

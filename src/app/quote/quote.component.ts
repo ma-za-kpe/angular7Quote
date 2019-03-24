@@ -8,6 +8,7 @@ import { Quote } from "../quote";
   styleUrls: ["./quote.component.css"]
 })
 export class QuoteComponent implements OnInit {
+  quote: Quote;
   quotes = [
     new Quote("Tweeting today", "paul", "paulo", 5),
     new Quote("Buy Cookies", "colio", "colo", 7),
@@ -19,5 +20,19 @@ export class QuoteComponent implements OnInit {
 
   addNewQuote(quotes) {
     this.quotes.push(quotes);
+  }
+
+  // myCount: number = 10;
+  IQuote(event) {
+    this.quote.voteUp = event;
+  }
+
+  // IQuote(): boolean {
+  //   this.quote.votes += 1;
+  //   return false;
+  // }
+  voteDown(): boolean {
+    this.quote.votes -= 1;
+    return false;
   }
 }

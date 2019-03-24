@@ -4,7 +4,12 @@
   <div *ngFor=' let quote of quotes'>
     <li>
       <h1>{{quote.title}}</h1> formed by <h2>{{quote.arthor}}</h2> and published by <h3>{{quote.publisher}}</h3>
+      VOTES == <h4>{{quote.votes}}</h4>
+      <app-vote-up (increaseQuote)="IQuote($event)"></app-vote-up>
+      <button type="submit" (click)="voteDown()">VOTE DOWN</button>
     </li>
   </div>
 
 </ul>
+
+<!-- <p *ngIf='quotes.length > 5'>You have too many goals</p> -->

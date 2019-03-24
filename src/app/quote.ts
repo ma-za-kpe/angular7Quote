@@ -4,6 +4,13 @@ export class Quote {
     public title: string,
     public arthor: string,
     public publisher: string,
-    votes?: number
+    public votes?: number
   ) {}
+
+  voteUp(): void {
+    this.votes += 1;
+  }
+  voteDown(): void {
+    this.votes -= 1;
+  }
 }
